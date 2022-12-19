@@ -1,0 +1,69 @@
+===================================================================================================
+
+Nume: Serban Bianca-Sanziana
+Grupa: 325CA
+Email: bianca.serban2506@stud.acs.upb.ro
+
+===================================================================================================
+
+Continutul proiectului:
+	- folder-ul src cu pachetele si fisierele .java
+	- folder-ul .git
+	- README
+
+===================================================================================================
+
+Prezentarea solutiei:
+	- Clasele implementate de mine se afla in folder-ele "myclasses", "input", "output"
+	- Pentru parsarea datelor am folosit clasele de input din folder-ul cu acelasi nume
+	
+	- In folder-ul de input se afla:
+		- clasa ChildrenInput in care se afla campurile copiilor
+		- clasa SantaGiftsListInput in care se afla campurile cadourilor
+		- clasa InitialDataInput in care se afla listele initiale de copii si de cadouri
+		- clasa AnnualChangesInput in care se afla campurile care se vor schimba in rundele
+		urmatoare
+		- clasa ChildUpdateInput in care se afla campurile care se vor schimba la un copil
+		- clasa Input in care se afla campurile citite 
+		-> clasa InputLoader in care se afla inputPath, adica calea de citire, iar cu 
+		ajutorul metodei readData parsez datele citite din input cu ajutorul functiei 
+		ObjectMapper
+		
+	- In folder-ul de output se afla:
+		- clasa ChildrenOutput in care se afla campurile copiilor pentru iesire
+		- clasa ChildrenList in care se afla metoda createList in care se adauga listele 
+		intr-o lista de output
+		- clasa ChildrenOutputList in care se afla lista de copii necesara output-ului
+		- clasa Output in care se afla lista annualChildren care este o lista de 
+		ChildrenOutputList 
+		- clasa Writer in care se afla outputPath, adica calea de afisare, iar cu ajutorul
+		metodei writeData am afisat datele de iesire tot cu ajutorul functiei ObjectMapper
+		
+	- In folder-ul myclasses se afla:
+		- clasa Assign in care se afla functiile de creare a listelor de copii
+		- clasa Children care are campurile din input. De asemenea, in aceasta clasa se
+		afla si 2 metode pentru crearea unor copii pentru AnnualChildren si respectiv,
+		pentru lista de cadouri de output
+		- clasa Child care este pentru Baby, Kid si Teen si care mosteneste Children si
+		are campurile suplimentare pentru output
+		- clasa PlayRounds in care se gasesc urmatoarele functii:
+			-> Functia playFirstRound calculeaza pentru fiecare copil datele 
+			corespunzatoare pentru runda 0 si apoi le adauga intr-un annualChildren.
+			-> Functia playRounds care este pentru urmatoarele runde si care calculeaza
+			pentru fiecare baby, kid si teen datele corespunzatoare pentru celelalte
+			runde.
+			-> Functia strategy care sorteaza lista in functie de strategie.
+			-> Functia niceScoreCityStrategy care sorteaza lista in functie de scorul 
+			de cumintenie a oraselor.
+			-> Functia elfPinkBlack care calculeaza bugetul pentru elfii pink si black.
+			-> Functia elfYellow care le dă un cadou copiilor care nu au primit niciun
+			alt cadou din sacul moșului
+			-> Functia giveGifts care adauga cadourile in lista copiilor
+			-> Functia update care adauga update-rile in lista de copii
+			-> Functia removeAdult care sterge adult-ul din lista de copii
+			-> Functia growChildren care incrementeaza varsta copiilor
+
+	- In folder-ul main se gaseste clasa Main am parsat datele, am creat listele de copii,
+	le-am adaugat in lista de output si am afisat-o
+	
+===================================================================================================
